@@ -10,6 +10,8 @@ import RequireAuth from './Pages/Login/RequireAuth';
 import SignUp from './Pages/Login/SignUp';
 import OrderDetails from './Pages/OrderDetails';
 import Navbar from './Pages/Shared/Navbar';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -47,6 +49,7 @@ function App() {
 
 
       </Routes>
+      <ToastContainer />
     </div >
   );
 }

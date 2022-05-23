@@ -3,9 +3,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 // import { Button, Form } from "react-bootstrap";
 // import { useForm } from "react-hook-form";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import auth from "../firebase.init";
-import OrderModal from "./Inventory/OrderModal";
+
 
 
 const OrderDetails = () => {
@@ -13,6 +13,38 @@ const OrderDetails = () => {
     const [parts, setParts] = useState([]);
     const [count, setCount] = useState([]);
     const [user, loading, error] = useAuthState(auth);
+
+    const handleOrder = event => {
+        event.preventDefault();
+        const buying = {
+            name: parts.name,
+            description: parts.description,
+            price: parts.price,
+            minimunOrderQuantity: parts.minimum_order_quantity,
+            availableQuantity: parts.available_quantity,
+            buyer: user.email,
+            buyerName: user.displayName,
+            address: event.target.address.value,
+            phone: event.target.phone.value
+
+
+
+        }
+        fetch('http://localhost:5000/buying', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(buying)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                toast.success('Item successfully add to my order page')
+            })
+
+
+    }
 
 
 
@@ -30,7 +62,7 @@ const OrderDetails = () => {
             .then((data) => setCount(data.available));
     }, [partId]);
 
-    const navigate = useNavigate();
+
 
     const handleSingleUniteDelevery = (event) => {
         event.preventDefault();
@@ -161,7 +193,7 @@ const OrderDetails = () => {
                         <div class="modal-box">
                             <label for="booking-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                             <h3 class="font-bold text-lg">{parts.name}</h3>
-                            <form>
+                            <form onSubmit={handleOrder}>
                                 <input type="text" name="name" disabled value={user?.displayName} class="input input-bordered input-accent w-full max-w-xs  mb-3" />
                                 <input type="email" name="email" disabled value={user?.email} class="input input-bordered input-accent w-full max-w-xs mb-3" />
                                 <input type="text" name="address" placeholder="Address" class="input input-bordered input-accent w-full max-w-xs mb-3" />
