@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 // import { Button, Form } from "react-bootstrap";
 // import { useForm } from "react-hook-form";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import auth from "../firebase.init";
+import OrderModal from "./Inventory/OrderModal";
 
 
 const OrderDetails = () => {
     const { partId } = useParams();
     const [parts, setParts] = useState([]);
     const [count, setCount] = useState([]);
+    const [user, loading, error] = useAuthState(auth);
+
+
+
+
     useEffect(() => {
         const url = (`http://localhost:5000/part/${partId}`);
         fetch(url)
@@ -21,6 +29,8 @@ const OrderDetails = () => {
             .then((response) => response.json())
             .then((data) => setCount(data.available));
     }, [partId]);
+
+    const navigate = useNavigate();
 
     const handleSingleUniteDelevery = (event) => {
         event.preventDefault();
@@ -49,6 +59,7 @@ const OrderDetails = () => {
                     alert("Informatin updated successfully");
                 });
         }
+
     };
 
     const handleUpdateDeleveredQuentity = (event) => {
@@ -121,7 +132,10 @@ const OrderDetails = () => {
                     event.target.reset();
                 });
         }
+
+
     };
+
     return (
 
         <div>
@@ -135,6 +149,31 @@ const OrderDetails = () => {
                     <p>Price: {parts.price}</p>
                     <p>Minimun Order Quantity :{parts.minimum_order_quantity}</p>
                     <p>Available Quantity :{parts.available_quantity}</p>
+
+
+
+
+                    <label for="booking-modal" class="btn modal-button">Buy Now</label>
+
+
+                    <input type="checkbox" id="booking-modal" class="modal-toggle" />
+                    <div class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                            <label for="booking-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                            <h3 class="font-bold text-lg">{parts.name}</h3>
+                            <form>
+                                <input type="text" name="name" disabled value={user?.displayName} class="input input-bordered input-accent w-full max-w-xs  mb-3" />
+                                <input type="email" name="email" disabled value={user?.email} class="input input-bordered input-accent w-full max-w-xs mb-3" />
+                                <input type="text" name="address" placeholder="Address" class="input input-bordered input-accent w-full max-w-xs mb-3" />
+                                <input type="text" name="phone" placeholder="Phone Number" class="input input-bordered input-accent w-full max-w-xs mb-3" />
+                                <input type="submit" value="Confirm" class="input input-bordered input-accent w-full max-w-xs mb-3 btn btn-info" />
+                            </form>
+
+                        </div>
+                    </div>
+
+
+
 
                 </div>
             </div>

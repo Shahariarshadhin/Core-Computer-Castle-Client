@@ -47,7 +47,7 @@ const Parts = ({ part }) => {
                 <p>Available Quantity :{available_quantity}</p>
                 <div class="card-actions">
                     <button onClick={() => navigatePart(_id)} class="btn btn-info">Order</button>
-                    {/* <button onClick={() => navigatePart(_id)} className='bg-[#38bdf8]' type="">Order</button> */}
+
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import Footer from '../Footer/Footer';
 
 import Parts from '../Parts';
+
 // import './Inventory.css';
 
 
@@ -10,6 +11,7 @@ const Inventory = () => {
 
 
     const [parts, setParts] = useState([]);
+
 
 
 
@@ -32,10 +34,12 @@ const Inventory = () => {
 
 
 
+
                     ></Parts>)
                 }
 
             </div>
+
 
 
 
