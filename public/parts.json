@@ -1,0 +1,68 @@
+[
+    {
+        
+        "img": "https://www.pcworld.com/wp-content/uploads/2022/02/gigabyteaorus1-1-2.png",
+        "name": "Motherboard",
+        "email": "core22castle@gmail.com",
+        "description": "The Product is good.It is a fresh product and there is no problem i can find in this product.",
+        "price": "9500",
+        "minimum_order_quantity": "150",
+        "available_quantity": "2000"
+       
+    },
+    {
+        
+        "img": "https://www.caroniz.com/wp-content/uploads/2021/04/Processor-JNT-Aug-2019.jpg",
+        "name": "Proceesor",
+        "email": "joe7root@gmail.com",
+        "description": "The Product is good.It is a fresh product and there is no problem i can find in this product.",
+        "price": "19500",
+        "minimum_order_quantity": "100",
+        "available_quantity": "1000"
+       
+    },
+    {
+        
+        "img": "https://www.techlandbd.com/image/cache/catalog/RAM/Team/XCALIBUR%20UD/team-xcalibur-ud-double.jpg-500x500.jpg",
+        "name": "RAM",
+        "email": "josh1buttler@gmail.com",
+        "description": "The Product is good.It is a fresh product and there is no problem i can find in this product.",
+        "price": "5000",
+        "minimum_order_quantity": "150",
+        "available_quantity": "2500"
+       
+    },
+    {
+        
+        "img": "https://www.tech21century.com/wp-content/uploads/2020/09/ssdDepositphotos_5086769_l-2015.jpg",
+        "name": "SSD",
+        "email": "virat18kohli@gmail.com",
+        "description": "The Product is good.It is a fresh product and there is no problem i can find in this product.",
+        "price": "6500",
+        "minimum_order_quantity": "100",
+        "available_quantity": "1500"
+       
+    },
+    {
+        
+        "img": "https://i.pinimg.com/736x/6a/db/65/6adb65fd6c54ebcb4ed64dac4e0014f8.jpg",
+        "name": "HDD",
+        "email": "ms7Dhoni@gmail.com",
+        "description": "The Product is good.It is a fresh product and there is no problem i can find in this product.",
+        "price": "5000",
+        "minimum_order_quantity": "150",
+        "available_quantity": "2000"
+       
+    },
+    {
+        
+        "img": "https://www.newegg.com/insider/wp-content/uploads/2020/09/msi-trio-10g-RTX-3080.jpeg",
+        "name": "Graphics Card",
+        "email": "leo10Messi@gmail.com",
+        "description": "The Product is good.It is a fresh product and there is no problem i can find in this product.",
+        "price": "22000",
+        "minimum_order_quantity": "150",
+        "available_quantity": "500"
+       
+    }
+]
