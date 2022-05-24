@@ -9,6 +9,7 @@ const Dashboard = () => {
     // const [user] = useAuthState(auth)
 
     // const [admin] = useAdmin(user);
+
     return (
         <div class="drawer drawer-mobile">
             <input id="dashboards-sidebar" type="checkbox" class="drawer-toggle" />
@@ -24,12 +25,14 @@ const Dashboard = () => {
 
                     <li><Link to="/dashboard">My Orders</Link></li>
                     <li><Link to="/dashboard/review">Add a Doctor Review</Link></li>
+                    <li><Link to="/dashboard/users">All Users</Link></li>
                     <li><Link to="/dashboard/myprofile">My Profile</Link></li>
 
 
 
-                    {/* <li><Link to="/dashboard/users">All Users</Link></li>
-                    <li><Link to="/dashboard/addDoctor">Add a Doctor</Link></li>
+
+
+                    {/* <li><Link to="/dashboard/addDoctor">Add a Doctor</Link></li>
                     <li><Link to="/dashboard/manageDoctor">Manage Doctor</Link></li> */}
 
 
