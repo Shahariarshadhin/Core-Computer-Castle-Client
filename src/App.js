@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import User from './Pages/Dashboard/User';
 import RequireAdmin from './Pages/Login/RequireAdmin';
+import Payment from './Pages/Dashboard/Payment';
 
 
 
@@ -46,6 +47,7 @@ function App() {
           </RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="users" element={<RequireAdmin><User></User></RequireAdmin>}></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
 
 
 
@@ -58,6 +60,8 @@ function App() {
           */}
 
         </Route>
+
+
 
 
       </Routes>
