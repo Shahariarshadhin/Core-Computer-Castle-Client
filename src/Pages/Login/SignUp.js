@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import useToken from '../hooks/useToken';
 
+
 const SignUp = () => {
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);

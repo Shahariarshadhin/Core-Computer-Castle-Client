@@ -179,8 +179,8 @@ const OrderDetails = () => {
                     <h2 class="text-2xl font-bold">{parts.name}</h2>
                     <p><small>{parts.description}</small></p>
                     <p>Price: {parts.price}</p>
-                    <p>Minimun Order Quantity :{parts.minimum_order_quantity}</p>
-                    <p>Available Quantity :{parts.available_quantity}</p>
+                    <p>Minimun Order Quantity :{parts.minimunOrderQuantity}</p>
+                    <p>Available Quantity :{parts.availableQuantity}</p>
 
 
 

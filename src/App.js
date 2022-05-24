@@ -12,6 +12,7 @@ import OrderDetails from './Pages/OrderDetails';
 import Navbar from './Pages/Shared/Navbar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MyOrders from './Pages/Dashboard/MyOrders';
 
 
 
@@ -41,8 +42,8 @@ function App() {
           <RequireAuth>
             <Dashboard />
           </RequireAuth>}>
-          {/* <Route index element={<MyAppointment></MyAppointment>}></Route>
-          <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          {/* <Route path="review" element={<MyReview></MyReview>}></Route>
           <Route path="users" element={<User></User>}></Route> */}
 
         </Route>
