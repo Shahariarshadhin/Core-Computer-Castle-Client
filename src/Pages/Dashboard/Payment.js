@@ -2,6 +2,18 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
+import { loadStripe } from '@stripe/stripe-js';
+
+import {
+    CardElement,
+    Elements,
+    useStripe,
+    useElements,
+} from '@stripe/react-stripe-js';
+
+import CheckoutForm from './CheckoutForm';
+
+const stripePromise = loadStripe('pk_test_51L3564CsvPi6AezQhgzhTuIvz20rJ2V6OmhmYj6WyQ5tF614juITO9CV6el3Tai49aYIVB40sicI13mPDEOr8p4v00vnOZyBhj');
 
 const Payment = () => {
 
@@ -31,8 +43,9 @@ const Payment = () => {
             </div>
             <div class="card w-96 bg-base-100 shadow-xl mt-8">
                 <div class="card-body">
-                    <h2 class="card-title">Card title!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <Elements stripe={stripePromise}>
+                        <CheckoutForm />
+                    </Elements>
 
                 </div>
             </div>
