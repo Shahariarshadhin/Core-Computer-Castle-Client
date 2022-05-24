@@ -1,12 +1,19 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
+import UserRow from './UserRow';
 
-// import UserRow from './UserRow';
 
 const User = () => {
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()));
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+
+    })
+        .then(res => res.json()));
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -14,7 +21,7 @@ const User = () => {
 
         <div class="overflow-x-auto">
             <h2>{users.length}</h2>
-            {/* <table class="table w-full">
+            <table class="table w-full">
 
                 <thead>
                     <tr>
@@ -41,7 +48,7 @@ const User = () => {
 
 
                 </tbody>
-            </table> */}
+            </table>
         </div>
 
 

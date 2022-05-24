@@ -14,6 +14,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import User from './Pages/Dashboard/User';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 
 
 
@@ -44,7 +45,15 @@ function App() {
             <Dashboard />
           </RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
-          <Route path="users" element={<User></User>}></Route>
+          <Route path="users" element={<RequireAdmin><User></User></RequireAdmin>}></Route>
+
+
+
+
+
+
+
+
           {/* <Route path="review" element={<MyReview></MyReview>}></Route>
           */}
 
