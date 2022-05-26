@@ -11,7 +11,9 @@ const Banner = () => {
                 <div className='mx-16'>
                     <h1 className="text-5xl text-white font-bold">Core Computer Castle</h1>
                     <p className="text-2xl text-white py-6">Providing a Wide Choice of Yours</p>
-                    <button className="btn bg-[#38bdf8]">Buy Now</button>
+
+                    <button className="btn bg-[#38bdf8]">Buy Now</button><br></br>
+                    <progress class="progress progress-info w-56"></progress>
                 </div>
             </div>
         </div>

@@ -20,6 +20,7 @@ import AddReview from './Pages/Dashboard/AddReview';
 import Review from './Pages/Home/Review';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import NotFound from './Pages/NotFound';
+import AddItem from './Pages/Dashboard/AddItem';
 
 
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="users" element={<RequireAdmin><User></User></RequireAdmin>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
+          <Route path="addProduct" element={<AddItem></AddItem>}></Route>
 
 
         </Route>
