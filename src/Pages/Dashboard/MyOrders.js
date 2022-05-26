@@ -67,7 +67,13 @@ const MyOrders = () => {
                                     <td>{order.availableQuantity}</td>
                                     <td>{order.minimunOrderQuantity}</td>
                                     <td>{order.price}</td>
-                                    <td>{(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
+                                    <td>{(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}>
+
+                                        <div>
+                                            <button className='btn btn-xs btn-success'>Pay</button>
+                                            <button className='btn btn-xs btn-success mx-4'>Delete </button>
+                                        </div>
+                                    </Link>}
 
                                         {(order.price && order.paid) &&
 
