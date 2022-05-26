@@ -27,8 +27,8 @@ const User = () => {
                     <tr>
                         <th></th>
                         <th>Name</th>
-                        <th>Job</th>
-                        <th>Favorite Color</th>
+                        <th>Role</th>
+                        <th>Remove</th>
                     </tr>
                 </thead>
                 <tbody>

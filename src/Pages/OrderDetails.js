@@ -59,7 +59,7 @@ const OrderDetails = () => {
         const url = (`http://localhost:5000/part/${partId}`);
         fetch(url)
             .then((response) => response.json())
-            .then((data) => setCount(data.available));
+            .then((data) => setCount(data.minimum_order_quantity));
     }, [partId]);
 
 
@@ -179,8 +179,15 @@ const OrderDetails = () => {
                     <h2 class="text-2xl font-bold">{parts.name}</h2>
                     <p><small>{parts.description}</small></p>
                     <p>Price: {parts.price}</p>
-                    <p>Minimun Order Quantity :{parts.minimunOrderQuantity}</p>
-                    <p>Available Quantity :{parts.availableQuantity}</p>
+                    <p>Minimun Order Quantity :{parts.minimum_order_quantity}</p>
+                    <p>Available Quantity :{parts.available_quantity}</p>
+
+                    <div>
+                        <form onSubmit={handleSingleUniteDelevery}>
+                            <input type="number" name="Input order quantity" placeholder="Input order quantity" class="input input-bordered input-accent w-full max-w-xs mb-3" />
+                            <input disabled type="submit" value="Order" class="input input-bordered input-accent w-full max-w-xs mb-3 btn btn-info" />
+                        </form>
+                    </div>
 
 
 
@@ -203,6 +210,8 @@ const OrderDetails = () => {
 
                         </div>
                     </div>
+
+
 
 
 

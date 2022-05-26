@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-// import Footer from '../Footer/Footer';
-
 import Parts from '../Parts';
 
-// import './Inventory.css';
+
 
 
 const Inventory = () => {
@@ -23,7 +21,7 @@ const Inventory = () => {
     return (
         <div>
 
-            <h1>inventory</h1>
+
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 px-12">
                 {
@@ -39,14 +37,6 @@ const Inventory = () => {
                 }
 
             </div>
-
-
-
-
-
-
-
-            {/* <Footer></Footer> */}
 
         </div>
     );

@@ -21,6 +21,9 @@ import Review from './Pages/Home/Review';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import NotFound from './Pages/NotFound';
 import AddItem from './Pages/Dashboard/AddItem';
+import MangeAllOrders from './Pages/Dashboard/MangeAllOrders';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
+import Myprofile from './Pages/Dashboard/Myprofile';
 
 
 
@@ -62,6 +65,9 @@ function App() {
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="addProduct" element={<AddItem></AddItem>}></Route>
+          <Route path="manageAllOrders" element={<MangeAllOrders></MangeAllOrders>}></Route>
+          <Route path="mangeProduct" element={<ManageProducts></ManageProducts>}></Route>
+          <Route path="myprofile" element={<Myprofile></Myprofile>}></Route>
 
 
         </Route>
