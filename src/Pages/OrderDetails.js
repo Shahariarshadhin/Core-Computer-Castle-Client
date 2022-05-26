@@ -30,7 +30,7 @@ const OrderDetails = () => {
 
 
         }
-        fetch('http://localhost:5000/buying', {
+        fetch('https://glacial-hamlet-48280.herokuapp.com/buying', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,13 +50,13 @@ const OrderDetails = () => {
 
 
     useEffect(() => {
-        const url = (`http://localhost:5000/part/${partId}`);
+        const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
         fetch(url)
             .then((response) => response.json())
             .then((data) => setParts(data));
     }, [partId]);
     useEffect(() => {
-        const url = (`http://localhost:5000/part/${partId}`);
+        const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
         fetch(url)
             .then((response) => response.json())
             .then((data) => setCount(data.minimum_order_quantity));
@@ -75,7 +75,7 @@ const OrderDetails = () => {
         } else {
             const updatedInfo = { updatedQuentity };
             //send updated data in backend
-            const url = (`http://localhost:5000/part/${partId}`);
+            const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
             fetch(url, {
                 method: "PUT",
                 headers: {
@@ -111,7 +111,7 @@ const OrderDetails = () => {
         } else {
             const updatedInfo = { updatedQuentity };
             //send updated data in backend
-            const url = (`http://localhost:5000/part/${partId}`);
+            const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
             fetch(url, {
                 method: "PUT",
                 headers: {
@@ -147,7 +147,7 @@ const OrderDetails = () => {
         } else {
             const updatedInfo = { updatedQuentity };
             //send updated data in backend
-            const url = (`http://localhost:5000/part/${partId}`);
+            const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
             fetch(url, {
                 method: "PUT",
                 headers: {

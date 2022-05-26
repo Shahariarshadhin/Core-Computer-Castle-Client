@@ -14,7 +14,7 @@ const Review = () => {
 
     useEffect(() => {
         if (user) {
-            fetch('http://localhost:5000/review', {
+            fetch('https://glacial-hamlet-48280.herokuapp.com/review', {
 
             })
                 .then(res => res.json())

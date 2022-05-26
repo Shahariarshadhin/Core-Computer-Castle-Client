@@ -21,7 +21,7 @@ const Myprofile = () => {
 
 
         }
-        fetch('http://localhost:5000/userdata', {
+        fetch('https://glacial-hamlet-48280.herokuapp.com/userdata', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
