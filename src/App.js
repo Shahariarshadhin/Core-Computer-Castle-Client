@@ -48,7 +48,12 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
-        <Route path="/part/:partId" element={<OrderDetails></OrderDetails>}></Route>
+        <Route path="/part/:partId" element={
+          <RequireAuth>
+            <OrderDetails></OrderDetails>
+          </RequireAuth>}>
+
+        </Route>
         <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
