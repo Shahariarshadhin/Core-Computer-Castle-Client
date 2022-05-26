@@ -18,6 +18,10 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import Payment from './Pages/Dashboard/Payment';
 import AddReview from './Pages/Dashboard/AddReview';
 import Review from './Pages/Home/Review';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import NotFound from './Pages/NotFound';
+
+
 
 
 
@@ -41,6 +45,11 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/part/:partId" element={<OrderDetails></OrderDetails>}></Route>
+        <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
+
+
+
 
 
         <Route path="dashboard" element={
