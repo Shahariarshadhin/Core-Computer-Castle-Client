@@ -18,7 +18,7 @@ const stripePromise = loadStripe('pk_test_51L3564CsvPi6AezQhgzhTuIvz20rJ2V6OmhmY
 const Payment = () => {
 
     const { id } = useParams();
-    const url = `https://glacial-hamlet-48280.herokuapp.com/buying/${id}`;
+    const url = `https://core-computer-castle.onrender.com/buying/${id}`;
 
     const { data: order, isLoading } = useQuery(['buying', id], () => fetch(url, {
         method: 'GET',

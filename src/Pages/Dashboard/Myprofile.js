@@ -21,7 +21,7 @@ const Myprofile = () => {
 
 
         }
-        fetch('https://glacial-hamlet-48280.herokuapp.com/userdata', {
+        fetch('https://core-computer-castle.onrender.com/userdata', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

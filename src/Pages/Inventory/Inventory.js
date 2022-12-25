@@ -14,7 +14,7 @@ const Inventory = () => {
 
 
     useEffect(() => {
-        fetch('https://glacial-hamlet-48280.herokuapp.com/part')
+        fetch('https://core-computer-castle.onrender.com/part')
             .then(res => res.json())
             .then(data => setParts(data));
     }, []);

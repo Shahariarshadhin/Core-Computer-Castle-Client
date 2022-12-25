@@ -7,7 +7,7 @@ const AddItem = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        const url = `https://glacial-hamlet-48280.herokuapp.com/part`;
+        const url = `https://core-computer-castle.onrender.com/part`;
         fetch(url, {
             method: 'POST',
             headers: {

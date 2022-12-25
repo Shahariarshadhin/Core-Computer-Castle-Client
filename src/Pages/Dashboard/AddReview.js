@@ -16,7 +16,7 @@ const AddReview = () => {
             ratings: event.target.ratings.value,
 
         }
-        fetch('https://glacial-hamlet-48280.herokuapp.com/review', {
+        fetch('https://core-computer-castle.onrender.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

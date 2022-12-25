@@ -18,7 +18,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, price, buyer, buyerName } = order;
 
     useEffect(() => {
-        fetch('https://glacial-hamlet-48280.herokuapp.com/create-payment-intent', {
+        fetch('https://core-computer-castle.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -87,7 +87,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://glacial-hamlet-48280.herokuapp.com/buying/${_id}`, {
+            fetch(`https://core-computer-castle.onrender.com/buying/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

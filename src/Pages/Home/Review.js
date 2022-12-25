@@ -14,7 +14,7 @@ const Review = () => {
 
     useEffect(() => {
         if (user) {
-            fetch('https://glacial-hamlet-48280.herokuapp.com/review', {
+            fetch('https://core-computer-castle.onrender.com/review', {
 
             })
                 .then(res => res.json())

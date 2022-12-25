@@ -30,7 +30,7 @@ const OrderDetails = () => {
 
 
         }
-        fetch('https://glacial-hamlet-48280.herokuapp.com/buying', {
+        fetch('https://core-computer-castle.onrender.com/buying', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,13 +50,13 @@ const OrderDetails = () => {
 
 
     useEffect(() => {
-        const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
+        const url = (`https://core-computer-castle.onrender.com/part/${partId}`);
         fetch(url)
             .then((response) => response.json())
             .then((data) => setParts(data));
     }, [partId]);
     useEffect(() => {
-        const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
+        const url = (`https://core-computer-castle.onrender.com/part/${partId}`);
         fetch(url)
             .then((response) => response.json())
             .then((data) => setCount(data.minimum_order_quantity));
@@ -75,7 +75,7 @@ const OrderDetails = () => {
         } else {
             const updatedInfo = { updatedQuentity };
             //send updated data in backend
-            const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
+            const url = (`https://core-computer-castle.onrender.com/part/${partId}`);
             fetch(url, {
                 method: "PUT",
                 headers: {
@@ -111,7 +111,7 @@ const OrderDetails = () => {
         } else {
             const updatedInfo = { updatedQuentity };
             //send updated data in backend
-            const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
+            const url = (`https://core-computer-castle.onrender.com/part/${partId}`);
             fetch(url, {
                 method: "PUT",
                 headers: {
@@ -147,7 +147,7 @@ const OrderDetails = () => {
         } else {
             const updatedInfo = { updatedQuentity };
             //send updated data in backend
-            const url = (`https://glacial-hamlet-48280.herokuapp.com/part/${partId}`);
+            const url = (`https://core-computer-castle.onrender.com/part/${partId}`);
             fetch(url, {
                 method: "PUT",
                 headers: {

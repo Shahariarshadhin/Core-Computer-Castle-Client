@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://glacial-hamlet-48280.herokuapp.com/buying?buyer=${user.email}`, {
+            fetch(`https://core-computer-castle.onrender.com/buying?buyer=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
